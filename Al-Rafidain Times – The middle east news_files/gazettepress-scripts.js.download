@@ -1,0 +1,51 @@
+(function ($) {
+  "use strict";
+  let gazettepressTicker = new Swiper(".gazettepress-ticker", {
+    spaceBetween: 0,
+    slidesPerView: 1,
+    speed: 300,
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+    loop: true,
+    allowTouchMove: true,
+    disableOnInteraction: true,
+    navigation: {
+      nextEl: ".gazettepress-ticker-next",
+      prevEl: ".gazettepress-ticker-prev",
+      clickable: true,
+    },
+  });
+  var gazettepressSlider = new Swiper(".gazettepress-slider", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".gazettepress-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".gazettepress-button-next",
+      prevEl: ".gazettepress-button-prev",
+    },
+    // Add more options as needed
+  });
+  $(".gazettepress-swiper-holder").find(".wp-block-post").addClass("swiper-slide");
+
+  jQuery(window).scroll(function () {
+    if (jQuery(this).scrollTop() > 50) {
+      jQuery(".gazettepress-backto-top a").fadeIn();
+    } else {
+      jQuery(".gazettepress-backto-top a").fadeOut();
+    }
+  });
+  jQuery(".gazettepress-backto-top a").click(function () {
+    jQuery("html, body").animate({ scrollTop: 0 }, 600);
+    return false;
+  });
+})(jQuery);

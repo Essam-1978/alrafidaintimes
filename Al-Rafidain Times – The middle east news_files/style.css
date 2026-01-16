@@ -1,0 +1,573 @@
+/*
+Theme Name: GazettePress
+Theme URI: https://websiteinwp.com/gazettepress-wordpress-theme-for-news-and-magazine/
+Author: WebsiteinWP
+Author URI: https://websiteinwp.com/
+Description: Introducing "GazettePress" – your ultimate WordPress theme for captivating news and magazine websites. Newsiste comes with dozens of beautiful home section patterns and 30+ total patterns with additonal 20+ premium patterns to make more . Crafted for publishers, bloggers, and editors, gazettepress combines elegance with functionality, ensuring an immersive reading experience. With sleek design and intuitive features, gazettepress empowers you to captivate readers with breaking news, in-depth features, and niche topics. Packed with powerful SEO tools and seamless social media integration, gazettepress elevates your online presence effortlessly. Responsive and lightning-fast, gazettepress guarantees flawless performance across devices. Choose gazettepress and unleash the full potential of your digital publication today. Explore GazettePress at https://websiteinwp.com/gazettepress-wordpress-theme-for-news-and-magazine/
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, e-commerce, full-site-editing, block-patterns, full-width-template, rtl-language-support, threaded-comments, translation-ready, block-styles, wide-blocks
+Version: 1.0.0
+Requires at least: 5.9
+Tested up to: 6.4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: gazettepress
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/*=====================
+STYLE FOR CONTACT FORM 7 LAYOUT
+===============*/
+
+body{
+    direction:rtl;
+}
+.wpcf7-form-control.wpcf7-text,
+.wpcf7-form-control.wpcf7-textarea,
+.wpcf7-form-control.wpcf7-number.wpcf7-validates-as-number,
+.wpcf7-form-control.wpcf7-select {
+  border-radius: 5px;
+  border: 1px solid #dad7d7;
+  padding: 15px;
+  width: 100%;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+.wpcf7-form-control.wpcf7-select {
+  appearance: none;
+  position: relative;
+}
+.wpcf7-form-control.wpcf7-select:after {
+  content: ">";
+  font-size: 20px;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+form.wpcf7-form *::placeholder {
+  font-size: 14px;
+}
+form.wpcf7-form *::-moz-placeholder {
+  font-size: 14px;
+}
+form.wpcf7-form *::-webkit-input-placeholder {
+  font-size: 14px;
+}
+input[type="submit"] {
+  transition: all ease 0.23s;
+  -o-transition: all ease 0.23s;
+  -moz-transition: all ease 0.23s;
+  -webkit-transition: all ease 0.23s;
+}
+
+.wpcf7-form-control.has-spinner.wpcf7-submit {
+  background: var(--wp--preset--color--heading-color);
+  color: var(--wp--preset--color--background);
+  border-radius: 0;
+  border: 0;
+  font-size: 16px;
+  padding: 15px 40px;
+}
+.wpcf7-form-control.has-spinner.wpcf7-submit:hover {
+  background: var(--wp--preset--color--primary);
+  color: var(--wp--preset--color--foreground-alt);
+}
+.wp-block-contact-form-7-contact-form-selector .wpcf7-form input,
+.wp-block-contact-form-7-contact-form-selector .wpcf7-form select,
+.wp-block-contact-form-7-contact-form-selector .wpcf7-form textarea {
+  border-radius: 0;
+  border: 1px solid var(--wp--preset--color--heading-color);
+}
+/*=====================
+STYLE FOR COMMENTS LAYOUT
+===============*/
+.wp-block-comments textarea#comment {
+  border-radius: 0;
+}
+form.comment-form {
+  border-radius: 20px;
+  margin-top: 24px;
+}
+.wp-block-post-comments-form {
+  border-radius: 20px;
+}
+form.comment-form input[type="email"],
+form.comment-form input[type="text"],
+form.comment-form input[type="url"],
+form.comment-form textarea {
+  border-radius: 0;
+  margin: 12px 0 25px;
+}
+form.comment-form .form-submit.wp-block-button {
+  margin-top: 25px;
+}
+.wp-block-comment-author-name {
+  font-weight: 600;
+}
+
+.wp-block-comment-date a {
+  color: var(--wp--preset--color--foregound);
+  font-size: 13px;
+}
+.wp-block-comment-template li {
+  margin-top: 50px;
+}
+.wp-block-comment-template li li {
+  margin-top: 10px;
+  padding-left: 60px;
+}
+a.comment-reply-link {
+  border: 1px solid;
+  padding: 5px 13px;
+  border-radius: 40px;
+  font-size: 13px;
+  opacity: 0.6;
+}
+.wp-block-post-comments-form input:not([type="submit"]),
+.wp-block-post-comments-form textarea {
+  border: 1px solid var(--wp--preset--color--border-color);
+}
+form.comment-form .form-submit.wp-block-button #submit {
+  border-radius: 0;
+  padding: 15px 32px;
+}
+.wp-block-post-comments-form {
+  margin-top: 30px;
+  display: inline-block;
+  width: 100%;
+}
+.woocommerce ul.products li.product a img {
+  border-radius: 5px;
+  height: 350px;
+  object-fit: cover;
+}
+.woocommerce ul.products li.product,
+.woocommerce-page ul.products li.product {
+  margin: 0 2.5% 2.992em 0;
+  width: 23.1%;
+}
+.woocommerce ul.products li.last,
+.woocommerce-page ul.products li.last {
+  margin-right: 0;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li {
+  border-radius: 0;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active:before,
+.woocommerce div.product .woocommerce-tabs ul.tabs li:before,
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active:after {
+  display: none;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li:after {
+  border: 0;
+}
+.woocommerce #reviews #comments ol.commentlist {
+  padding: 0;
+  margin-top: 20px !important;
+}
+.woocommerce-page .input-text {
+  padding: 11px 30px;
+  border: 1px solid #817e7e;
+  border-radius: 5px;
+}
+.wp-block-post-excerpt__excerpt a,
+.entry-content.wp-block-post-content a,
+p a {
+  text-decoration: underline;
+}
+nav.wp-block-navigation ul li a:hover,
+.wp-block-button.is-style-outline a:hover {
+  color: var(--wp--preset--color--heading-color) !important;
+}
+.wp-block-group.is-style-gazettepress-boxshadow:hover,
+.wp-block-group.is-style-gazettepress-boxshadow-medium:hover,
+.wp-block-group.is-style-gazettepress-boxshadow-large:hover {
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+.gazettepress-swiper-holder li {
+  margin-block-start: 0 !important;
+}
+.wp-block-query.gazettepress-ticker,
+.wp-block-query.gazettepress-slider {
+  overflow: hidden;
+}
+@keyframes gazettepressPulse {
+  0% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+.wp-block-image.gazettepress-flash-icon img {
+  animation: gazettepressPulse 0.75s linear infinite;
+}
+.wp-block-heading.gazettepress-flashnews-heading {
+  position: relative;
+}
+.wp-block-navigation-item.gazettepress-home-menu.wp-block-home-link a {
+  position: relative;
+  background: var(--wp--preset--color--primary);
+  width: 60px;
+  height: 56px;
+  padding: 0;
+  text-indent: -5000px;
+}
+
+.wp-block-navigation-item.gazettepress-home-menu.wp-block-home-link a:before {
+  content: "";
+  mask-image: url(assets/images/home_icon.svg);
+  display: inline-block;
+  background-color: var(--wp--preset--color--light-color);
+  mask-position: center;
+  mask-repeat: no-repeat;
+  width: 60px;
+  height: 56px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.wp-block-navigation-item.gazettepress-home-menu.wp-block-home-link a:hover:before {
+  background-color: var(--wp--preset--color--secondary);
+}
+.gazettepress-navigation.wp-block-navigation ul li a {
+  line-height: 56px;
+  transition: all ease 0.23s;
+  position: relative;
+}
+.gazettepress-navigation.wp-block-navigation ul li a:hover {
+  color: var(--wp--preset--color--secondary) !important;
+}
+.gazettepress-navigation.wp-block-navigation ul li a:after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--wp--preset--color--secondary);
+  transition: all ease 0.23s;
+}
+.gazettepress-navigation.wp-block-navigation ul li a:hover:after {
+  width: 100%;
+}
+.gazettepress-nav-search.wp-block-search .wp-block-search__inside-wrapper {
+  justify-content: end;
+}
+.gazettepress-nav-search.wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button:hover svg {
+  fill: var(--wp--preset--color--secondary);
+}
+.wp-block-heading.gazettepress-heading {
+  border-radius: 5px;
+}
+.gazettepress-footer-tags.wp-block-tag-cloud a {
+  padding: 3px 7px;
+  color: var(--wp--preset--color--foregound);
+  background: var(--wp--preset--color--light-color);
+  border-radius: 3px;
+  font-size: 14px !important;
+  text-decoration: none;
+  margin: 0 5px 5px 0;
+}
+.gazettepress-footer-tags.wp-block-tag-cloud a:hover {
+  background: var(--wp--preset--color--secondary);
+  color: var(--wp--preset--color--light-color);
+}
+.wp-block-cover.gazettepress-post-cover {
+  transition: all ease 0.65s;
+}
+.wp-block-cover.gazettepress-post-cover:hover img.wp-post-image {
+  transform: scale(1.25);
+}
+.wp-block-heading.gazettepress-section-header {
+  border-radius: 3px;
+}
+.wp-block-button.gazettepress-all-btns a.wp-block-button__link {
+  display: flex;
+  align-items: center;
+  padding-right: 40px !important;
+  position: relative;
+  transition: all ease 0.45s;
+}
+.wp-block-button.gazettepress-all-btns a.wp-block-button__link:before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  display: inline-block;
+  background-color: var(--wp--preset--color--light-shade);
+  right: 0;
+  top: -7px;
+  border-radius: 50%;
+  transition: all ease 0.45s;
+}
+.wp-block-button.gazettepress-all-btns a.wp-block-button__link:hover:before {
+  background-color: var(--wp--preset--color--primary);
+}
+.wp-block-button.gazettepress-all-btns a.wp-block-button__link:after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  display: inline-block;
+  background-color: var(--wp--preset--color--primary);
+  mask-image: url(assets/images/icon_arrow_right.svg);
+  mask-position: center;
+  mask-repeat: no-repeat;
+  right: 0;
+  top: -7px;
+  transition: all ease 0.45s;
+}
+.wp-block-button.gazettepress-all-btns a.wp-block-button__link:hover:after {
+  background-color: var(--wp--preset--color--light-color);
+}
+.gazettepress-post-pagination.wp-block-query-pagination .wp-block-query-pagination-numbers a,
+.gazettepress-post-pagination.wp-block-query-pagination .wp-block-query-pagination-numbers .page-numbers.current {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  justify-content: center;
+  background-color: var(--wp--preset--color--primary);
+  display: inline-block;
+  line-height: 30px;
+  color: var(--wp--preset--color--light-color);
+}
+.gazettepress-post-pagination.wp-block-query-pagination .wp-block-query-pagination-numbers .page-numbers.current,
+.gazettepress-post-pagination.wp-block-query-pagination .wp-block-query-pagination-numbers a:hover {
+  background-color: var(--wp--preset--color--secondary);
+}
+.wp-block-query.gazettepress-slider {
+  position: relative;
+}
+.wp-block-query.gazettepress-slider .swiper-pagination-bullet,
+.wp-block-query.tg-post-slider .swiper-pagination-bullet,
+.wp-block-query.tg-post-carousel .swiper-pagination-bullet {
+  background-color: var(--wp--preset--color--light-color) !important;
+}
+.wp-block-query.tg-post-carousel .swiper-pagination-bullet {
+  background-color: var(--wp--preset--color--primary) !important;
+}
+.wp-block-query.gazettepress-slider .swiper-pagination-bullet.swiper-pagination-bullet-active,
+.wp-block-query.tg-post-slider .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: var(--wp--preset--color--primary) !important;
+}
+.wp-block-query.tg-post-carousel .swiper-pagination.tgpost-carousel-pagination {
+  bottom: -30px;
+}
+.wp-block-query.gazettepress-slider .swiper-pagination.gazettepress-pagination {
+  bottom: 10px;
+}
+.wp-block-query.gazettepress-slider .swiper-button-next.gazettepress-button-next,
+.wp-block-query.gazettepress-slider .swiper-button-prev.gazettepress-button-prev,
+.wp-block-query.tg-post-slider .swiper-button-next.tgpost-slider-next,
+.wp-block-query.tg-post-slider .swiper-button-prev.tgpost-slider-prev,
+.wp-block-query.tg-post-carousel .swiper-button-next.tgpost-carousel-next,
+.wp-block-query.tg-post-carousel .swiper-button-prev.tgpost-carousel-prev {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--wp--preset--color--light-color) !important;
+  opacity: 0;
+  transition: all ease 0.23s;
+  left: 0;
+  z-index: 555;
+}
+.wp-block-query.gazettepress-slider .swiper-button-next.gazettepress-button-next,
+.wp-block-query.tg-post-slider .swiper-button-next.tgpost-slider-next,
+.wp-block-query.tg-post-carousel .swiper-button-next.tgpost-carousel-next {
+  left: auto;
+  right: 0;
+}
+.wp-block-query.gazettepress-slider:hover .swiper-button-next.gazettepress-button-next,
+.wp-block-query.gazettepress-slider:hover .swiper-button-prev.gazettepress-button-prev,
+.wp-block-query.tg-post-slider:hover .swiper-button-next.tgpost-slider-next,
+.wp-block-query.tg-post-slider:hover .swiper-button-prev.tgpost-slider-prev,
+.wp-block-query.tg-post-carousel:hover .swiper-button-prev.tgpost-carousel-prev,
+.wp-block-query.tg-post-carousel:hover .swiper-button-next.tgpost-carousel-next {
+  opacity: 1;
+  left: 30px;
+}
+.wp-block-query.gazettepress-slider:hover .swiper-button-next.gazettepress-button-next,
+.wp-block-query.tg-post-slider:hover .swiper-button-next.tgpost-slider-next,
+.wp-block-query.tg-post-carousel:hover .swiper-button-next.tgpost-carousel-next {
+  left: auto;
+  right: 20px;
+}
+.wp-block-query.gazettepress-slider .swiper-button-next.gazettepress-button-next:hover,
+.wp-block-query.gazettepress-slider .swiper-button-prev.gazettepress-button-prev:hover,
+.wp-block-query.tg-post-slider .swiper-button-next.tgpost-slider-next:hover,
+.wp-block-query.tg-post-slider .swiper-button-prev.tgpost-slider-prev:hover,
+.wp-block-query.tg-post-carousel .swiper-button-prev.tgpost-carousel-prev:hover,
+.wp-block-query.tg-post-carousel .swiper-button-next.tgpost-carousel-next:hover,
+.news-ticker-holderv.ticker-2 .swiper-button-next:hover,
+.news-ticker-holderv.ticker-2 .swiper-button-prev:hover {
+  background-color: var(--wp--preset--color--primary) !important;
+}
+.wp-block-query.gazettepress-slider .swiper-button-next.gazettepress-button-next:after,
+.wp-block-query.gazettepress-slider .swiper-button-prev.gazettepress-button-prev:after,
+.wp-block-query.tg-post-slider .swiper-button-next.tgpost-slider-next:after,
+.wp-block-query.tg-post-slider .swiper-button-prev.tgpost-slider-prev:after,
+.wp-block-query.tg-post-carousel .swiper-button-prev.tgpost-carousel-prev:after,
+.wp-block-query.tg-post-carousel .swiper-button-next.tgpost-carousel-next:after,
+.news-ticker-holderv.ticker-2 .swiper-button-prev:after,
+.news-ticker-holderv.ticker-2 .swiper-button-next:after {
+  color: var(--wp--preset--color--primary) !important;
+}
+.wp-block-query.gazettepress-slider .swiper-button-next.gazettepress-button-next:hover:after,
+.wp-block-query.gazettepress-slider .swiper-button-prev.gazettepress-button-prev:hover:after,
+.wp-block-query.tg-post-slider .swiper-button-next.tgpost-slider-next:hover:after,
+.wp-block-query.tg-post-slider .swiper-button-prev.tgpost-slider-prev:hover:after,
+.wp-block-query.tg-post-carousel .swiper-button-prev.tgpost-carousel-prev:hover:after,
+.wp-block-query.tg-post-carousel .swiper-button-next.tgpost-carousel-next:hover:after,
+.news-ticker-holderv.ticker-2 .swiper-button-prev:hover:after,
+.news-ticker-holderv.ticker-2 .swiper-button-next:hover:after {
+  color: var(--wp--preset--color--light-color) !important;
+}
+.wp-block-query.gazettepress-slider .gazettepress-navigation {
+  margin-block-start: 0;
+}
+.news-ticker-holderv.ticker-2 .swiper-button-prev,
+.news-ticker-holderv.ticker-2 .swiper-button-next {
+  top: -45px !important;
+  width: 40px;
+  height: 40px;
+  z-index: 555;
+  font-size: 16px;
+}
+.news-ticker-holderv.ticker-2 .swiper-button-prev:after,
+.news-ticker-holderv.ticker-2 .swiper-button-next:after {
+  font-size: 14px !important;
+}
+.news-ticker-holderv.ticker-2 .swiper-button-prev {
+  right: 43px !important;
+}
+.wp-block-group.gazettepress-sticky-sidebar {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 20px;
+}
+.wp-block-social-links.gazettepress-sidebar-socials .wp-social-link.wp-block-social-link {
+  width: 48%;
+  border-radius: 0;
+}
+.wp-block-group.gazettepress-related-post .tg-related-post .post-box img {
+  height: 220px;
+}
+.wp-block-group.gazettepress-related-post .tg-related-post .post-box .title-heading {
+  font-size: 20px;
+}
+.wp-block-group.gazettepress-related-post .tg-related-post .post-box .title-heading a {
+  color: var(--wp--preset--color--heading-color);
+}
+.wp-block-group.gazettepress-related-post .tg-related-post .post-box .title-heading a:hover {
+  color: var(--wp--preset--color--secondary);
+}
+.wp-block-group.gazettepress-related-post .tg-related-post .posted-on {
+  color: var(--wp--preset--color--meta-color);
+}
+.wp-block-group.gazettepress-breadcrumbs #breadcrumbs a {
+  text-decoration: none;
+}
+.wp-block-group.gazettepress-breadcrumbs #breadcrumbs {
+  font-size: 14px;
+}
+.tg-social-sharing a {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+.tg-social-sharing a svg {
+  height: 14px;
+}
+.gazettepress-footer-categories.wp-block-categories li {
+  display: flex;
+  justify-content: space-between;
+}
+.wp-block-button.gazettepress-backto-top .wp-block-button__link.wp-element-button {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 13px;
+  bottom: 13px;
+  display: inline-block;
+  z-index: 999;
+  text-indent: -5000px;
+  display: none;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.089);
+}
+.wp-block-button.gazettepress-backto-top .wp-block-button__link.wp-element-button:after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  -webkit-mask-image: url(assets/images/up-arrow.svg);
+  mask-image: url(assets/images/up-arrow.svg);
+  mask-repeat: no-repeat;
+  mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center center;
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  top: 0;
+}
+.wp-block-button.gazettepress-backto-top .wp-block-button__link.wp-element-button:hover:after {
+  background-color: var(--wp--preset--color--primary) !important;
+}
+.wp-block-group.gazettepress-current-date p,
+.wp-block-group.gazettepress-current-time p {
+  color: inherit;
+}
+.wp-block-group.gazettepress-hticker-controls {
+  display: inline-block;
+  position: absolute;
+  left: -30px;
+  width: 70px;
+  height: 30px;
+  top: -15px;
+}
+.wp-block-group.gazettepress-header-ticker {
+  position: relative;
+}
+.wp-block-group.gazettepress-hticker-controls .swiper-button-prev.gazettepress-ticker-prev,
+.wp-block-group.gazettepress-hticker-controls .swiper-button-next.gazettepress-ticker-next {
+  position: relative;
+  display: inline-block;
+}
+.wp-block-group.gazettepress-hticker-controls .swiper-button-prev.gazettepress-ticker-prev {
+  margin-right: 10px !important;
+}
+.wp-block-group.gazettepress-hticker-controls .swiper-button-prev.gazettepress-ticker-prev:after,
+.wp-block-group.gazettepress-hticker-controls .swiper-button-next.gazettepress-ticker-next:after {
+  font-size: 12px !important;
+  color: var(--wp--preset--color--light-color) !important;
+}
+.wp-block-group.gazettepress-hticker-controls .swiper-button-prev.gazettepress-ticker-prev:hover:after,
+.wp-block-group.gazettepress-hticker-controls .swiper-button-next.gazettepress-ticker-next:hover:after {
+  color: var(--wp--preset--color--primary) !important;
+}
+.wp-block-group.gazettepress-carousel-overlay .swiper-pagination.tgpost-carousel-pagination {
+  bottom: -10px;
+}
+.gazettepress-navigation.wp-block-navigation ul .wp-block-navigation__submenu-container.wp-block-navigation-submenu li a {
+  line-height: 35px;
+}
+.gazettepress-simple-nav .wp-block-search__inside-wrapper {
+  justify-content: end;
+  padding: 0;
+}
+.wp-block-group.gazettepress-topbar-links a {
+  text-decoration: none;
+}
+@media (max-width: 640px) {
+  ul.wp-block-social-links.is-content-justification-right.wp-block-social-links-is-layout-flex {
+    justify-content: flex-start;
+  }
+}
